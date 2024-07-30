@@ -1,3 +1,4 @@
+import { Navigation } from "../Navigation/Navigation";
 import css from "./AppBar.module.css";
 
 export const AppBar = () => {
@@ -9,8 +10,8 @@ export const AppBar = () => {
         </svg>
         <span className={css.logoText}>LearnLingo</span>
       </div>
-      {/* <Navigation />
-      {isLoggedIn ? <UserMenu /> : <AuthNav />} */}
+      <Navigation />
+      {/* {isLoggedIn ? <UserMenu /> : <AuthNav />} */}
     </header>
   );
 };
