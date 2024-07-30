@@ -1,0 +1,23 @@
+.header {
+  margin-right: 64px;
+  margin-left: 64px;
+  height: 48px;
+  display: flex;
+}
+.svg {
+  width: 28px;
+  height: 28px;
+}
+.logoCont {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.logoText {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
