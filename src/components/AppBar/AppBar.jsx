@@ -1,3 +1,4 @@
+import { AuthNav } from "../AuthNav/AuthNav";
 import { Navigation } from "../Navigation/Navigation";
 import css from "./AppBar.module.css";
 
@@ -12,6 +13,7 @@ export const AppBar = () => {
       </div>
       <Navigation />
       {/* {isLoggedIn ? <UserMenu /> : <AuthNav />} */}
+      <AuthNav />
     </header>
   );
 };
