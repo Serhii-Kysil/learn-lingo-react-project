@@ -1,3 +1,4 @@
+import { AdditionalInfo } from "../../components/AdditionalInfo/AdditionalInfo";
 import { WelcomeImg } from "../../components/WelcomeImg/WelcomeImg";
 import { WelcomeInfo } from "../../components/WelcomeInfo/WelcomeInfo";
 
@@ -10,6 +11,7 @@ export default function HomePage() {
         <WelcomeInfo />
         <WelcomeImg />
       </div>
+      <AdditionalInfo />
     </div>
   );
 }

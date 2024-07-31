@@ -1,0 +1,44 @@
+.addInfoBlock {
+  margin-top: 24px;
+  border: 1.5px dashed #9fbaae;
+  border-radius: 30px;
+  width: 1312px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  /* padding: 40px 120px; */
+}
+.infoList {
+  list-style: none;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  justify-content: center;
+}
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.main {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+.second {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+  text-align: left;
+
+  max-width: 90px;
+
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
