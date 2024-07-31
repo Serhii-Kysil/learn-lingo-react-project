@@ -5,7 +5,7 @@ import css from "./HomePage.module.css";
 
 export default function HomePage() {
   return (
-    <div>
+    <div className={css.home}>
       <div className={css.welcomeSection}>
         <WelcomeInfo />
         <WelcomeImg />
