@@ -1,7 +1,9 @@
+import { WelcomeInfo } from "../../components/WelcomeInfo/WelcomeInfo";
+
 export default function HomePage() {
   return (
     <>
-      <h1>HOMEPAGE</h1>
+      <WelcomeInfo />
     </>
   );
 }
