@@ -10,7 +10,7 @@ const schema = yup.object().shape({
     .string()
     .email("Invalid email format")
     .required("Email is required"),
-  password: yup.string().required("Password is required"),
+  password: yup.string().required("Password is required").min(8),
 });
 
 export const LoginForm = ({ onClose }) => {
@@ -38,6 +38,7 @@ export const LoginForm = ({ onClose }) => {
           className={css.emailInput}
         />
         <p className={css.error}>{errors.email?.message}</p>
+
         <div className={css.passwordContainer}>
           <input
             {...register("password")}
@@ -52,9 +53,9 @@ export const LoginForm = ({ onClose }) => {
             aria-label={isPasswordVisible ? "Hide password" : "Show password"}
           >
             {isPasswordVisible ? (
-              <FaEyeSlash className={css.eye} />
-            ) : (
               <FaEye className={css.eye} />
+            ) : (
+              <FaEyeSlash className={css.eye} />
             )}
           </button>
         </div>

@@ -10,9 +10,104 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 
   font-size: 18px;
   font-weight: 700;
   line-height: 28px;
   text-align: left;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+}
+.nameInput {
+  outline: none;
+  border: 1px solid #1214171a;
+  border-radius: 12px;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 18px;
+  margin-bottom: 18px;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+}
+.nameInput::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+}
+
+.emailInput {
+  outline: none;
+  border: 1px solid #1214171a;
+  border-radius: 12px;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 18px;
+  margin-bottom: 18px;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+}
+.emailInput::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+}
+
+.passwordInput {
+  outline: none;
+  border: 1px solid #1214171a;
+  border-radius: 12px;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 18px;
+  margin-bottom: 40px;
+
+  display: flex;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+}
+.passwordInput::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+}
+
+.inputsContainer {
+  display: flex;
+  flex-direction: column;
+}
+.passwordContainer {
+  position: relative;
+}
+.eyeButton {
+  position: absolute;
+  top: 25%;
+  right: 18px;
+  transform: translateY(-25%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+.eye {
+  width: 20px;
+  height: 20px;
 }
