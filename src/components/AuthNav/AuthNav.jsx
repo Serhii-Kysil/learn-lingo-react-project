@@ -4,6 +4,8 @@ import { FiLogIn } from "react-icons/fi";
 
 import { SimpleModal } from "../SimpleModal/SimpleModal";
 import { useState } from "react";
+import { LoginForm } from "../LoginForm/LoginForm";
+import { RegistrationForm } from "../RegistrationForm/RegistrationForm";
 
 export const AuthNav = () => {
   const [modalLogInIsOpen, setModalLogInOpen] = useState(false);
@@ -33,7 +35,7 @@ export const AuthNav = () => {
             </p>
           </div>
           <div>Form</div>
-          <button className={css.submitBtn}>Log In</button>
+          <LoginForm onClose={() => setModalLogInOpen(false)} />
         </div>
       </SimpleModal>
 
@@ -53,7 +55,7 @@ export const AuthNav = () => {
             </p>
           </div>
           <div>Form</div>
-          <button className={css.submitBtn}>Sign Up</button>
+          <RegistrationForm />
         </div>
       </SimpleModal>
     </div>
