@@ -2,6 +2,8 @@ import css from "./AuthNav.module.css";
 
 import { FiLogIn } from "react-icons/fi";
 
+import { SimpleModal } from "../SimpleModal/SimpleModal";
+
 export const AuthNav = () => {
   return (
     <div className={css.wrapper}>
@@ -10,6 +12,8 @@ export const AuthNav = () => {
         Log in
       </button>
       <button className={css.regBtn}>Registration</button>
+
+      <SimpleModal />
     </div>
   );
 };
