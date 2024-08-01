@@ -21,7 +21,7 @@ const teacherPersistConfig = {
 
 export const store = configureStore({
   reducer: {
-    campers: persistReducer(teacherPersistConfig, teacherReducer),
+    teachers: persistReducer(teacherPersistConfig, teacherReducer),
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

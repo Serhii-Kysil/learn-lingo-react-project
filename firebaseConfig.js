@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-  apiKey: "ad",
+  apiKey: "AIzaSyCFgoEUvMxoc_KyUlVWXuLtVFfgYS9bm1Q",
   authDomain: "learn-lingo-ad84f.firebaseapp.com",
   projectId: "learn-lingo-ad84f",
   storageBucket: "learn-lingo-ad84f.appspot.com",
