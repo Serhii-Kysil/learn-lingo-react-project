@@ -34,7 +34,6 @@ export const AuthNav = () => {
               and continue your search for an teacher.
             </p>
           </div>
-          <div>Form</div>
           <LoginForm onClose={() => setModalLogInOpen(false)} />
         </div>
       </SimpleModal>
@@ -54,8 +53,7 @@ export const AuthNav = () => {
               information
             </p>
           </div>
-          <div>Form</div>
-          <RegistrationForm />
+          <RegistrationForm onClose={() => setModalLogInOpen(false)} />
         </div>
       </SimpleModal>
     </div>
