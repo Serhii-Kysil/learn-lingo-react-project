@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { database } from "/firebaseConfig";
-import { ref, get } from "firebase/database";
+import { ref, get, query, limitToFirst } from "firebase/database";
 
 // Асинхронный экшен для получения данных
 export const fetchTeachers = createAsyncThunk(
@@ -8,7 +8,8 @@ export const fetchTeachers = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const dbRef = ref(database, "/");
-      const snapshot = await get(dbRef);
+      const limitedQuery = query(dbRef, limitToFirst(3));
+      const snapshot = await get(limitedQuery);
       if (snapshot.exists()) {
         return snapshot.val();
       } else {
