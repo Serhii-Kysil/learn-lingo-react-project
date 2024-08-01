@@ -17,6 +17,8 @@
   font-weight: 700;
   line-height: 20px;
   text-align: left;
+
+  cursor: pointer;
 }
 .icon {
   stroke: #9fbaae;
@@ -35,4 +37,6 @@
   line-height: 20px;
   text-align: left;
   color: #ffffff;
+
+  cursor: pointer;
 }
