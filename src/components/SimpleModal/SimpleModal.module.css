@@ -28,9 +28,9 @@
   margin: 20px;
   width: 100%;
   max-width: 566px;
-  border-radius: 20px;
+  border-radius: 30px;
   background-color: #ffffff;
-  padding: 40px 20px 20px 20px;
+  padding: 64px;
   transform: translateY(-50px);
   transition: opacity 0.3s, transform 0.3s;
 }

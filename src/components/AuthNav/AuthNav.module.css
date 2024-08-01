@@ -40,3 +40,31 @@
 
   cursor: pointer;
 }
+
+.modalCont {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.textBlock {
+  width: 438px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modalTitle {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.modalDesc {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+}
