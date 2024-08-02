@@ -8,7 +8,7 @@ export const fetchTeachers = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const dbRef = ref(database, "/");
-      const limitedQuery = query(dbRef, limitToFirst(3));
+      const limitedQuery = query(dbRef, limitToFirst(4));
       const snapshot = await get(limitedQuery);
       if (snapshot.exists()) {
         return snapshot.val();
