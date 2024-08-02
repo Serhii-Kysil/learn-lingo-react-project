@@ -77,20 +77,36 @@ export const TeachersListItem = ({ teacher }) => {
           {isExpanded && (
             <div className={css.expandedBlock}>
               <p className={css.expandedInfo}>{teacher.experience}</p>
+
               <div className={css.reviewsBlock}>
                 {teacher.reviews.map((review, index) => (
                   <div key={index} className={css.review}>
-                    <p className={css.reviewAuthor}>{review.reviewer_name}</p>
-                    <p className={css.reviewText}>{review.text}</p>
-                    <p className={css.reviewRating}>
-                      Rating: {review.reviewer_rating}
-                    </p>
+                    <div className={css.avatarBlock}>
+                      <img
+                        src="/public/user.png"
+                        alt="student"
+                        className={css.studentAvatar}
+                      />
+
+                      <div className={css.nameBlock}>
+                        <p className={css.reviewAuthor}>
+                          {review.reviewer_name}
+                        </p>
+                        <p className={css.reviewRating}>
+                          <IoStar className={css.reviewIcon} />{" "}
+                          {review.reviewer_rating}.0
+                        </p>
+                      </div>
+                    </div>
+
+                    <p className={css.reviewText}>{review.comment}</p>
                   </div>
                 ))}
               </div>
             </div>
           )}
         </div>
+
         <button className={css.loadMoreBtn} onClick={handleReadMoreClick}>
           {isExpanded ? "Read less" : "Read more"}
         </button>

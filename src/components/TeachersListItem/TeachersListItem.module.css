@@ -24,7 +24,7 @@
 .nameBlock {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 2px;
 }
 .span {
   color: #8a8a89;
@@ -166,4 +166,50 @@
 
   margin-bottom: 32px;
   padding: 0;
+}
+.reviewsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.expandedInfo {
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+.studentAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 100px;
+}
+.avatarBlock {
+  display: flex;
+  gap: 12px;
+}
+.reviewAuthor {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+
+  color: #8a8a89;
+}
+.reviewRating {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: left;
+  display: flex;
+  gap: 8px;
+  color: #121417;
+}
+.reviewIcon {
+  width: 16px;
+  height: 16px;
+  fill: #ffc531;
+}
+.review {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
