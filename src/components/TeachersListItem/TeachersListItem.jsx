@@ -5,7 +5,15 @@ import { FiBookOpen } from "react-icons/fi";
 import { IoStar } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
 
+import { useState } from "react";
+
 export const TeachersListItem = ({ teacher }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleReadMoreClick = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   return (
     <li className={css.listItem}>
       <div className={css.imgCont}>
@@ -66,8 +74,26 @@ export const TeachersListItem = ({ teacher }) => {
             Conditions:{" "}
             <span className={css.aboutSpan}>{teacher.conditions}</span>
           </p>
+          {isExpanded && (
+            <div className={css.expandedBlock}>
+              <p className={css.expandedInfo}>{teacher.experience}</p>
+              <div className={css.reviewsBlock}>
+                {teacher.reviews.map((review, index) => (
+                  <div key={index} className={css.review}>
+                    <p className={css.reviewAuthor}>{review.reviewer_name}</p>
+                    <p className={css.reviewText}>{review.text}</p>
+                    <p className={css.reviewRating}>
+                      Rating: {review.reviewer_rating}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
-        <button className={css.loadMoreBtn}>Read more</button>
+        <button className={css.loadMoreBtn} onClick={handleReadMoreClick}>
+          {isExpanded ? "Read less" : "Read more"}
+        </button>
       </div>
     </li>
   );
