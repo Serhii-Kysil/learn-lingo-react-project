@@ -22,6 +22,9 @@ export const TeachersListItem = ({ teacher }) => {
           alt="teacher avatar"
           className={css.img}
         />
+        <svg className={css.avatarDot}>
+          <use href="/public/symbol-defs.svg#icon-dot"></use>
+        </svg>
       </div>
       <div className={css.infoBlock}>
         <div className={css.topBlock}>
