@@ -1,6 +1,5 @@
 import { fetchTeachers } from "../../redux/Teachers/operations";
 import {
-  selectTeachers,
   selectIsItemsLoading,
   selectItemsError,
 } from "../../redux/Teachers/selector";
@@ -8,10 +7,12 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 
+import css from "./TeachersPage.module.css";
+import { TeachersList } from "../../components/TeachersList/TeachersList";
+
 export default function TeachersPage() {
   const dispatch = useDispatch();
 
-  const teachers = useSelector(selectTeachers);
   const isLoading = useSelector(selectIsItemsLoading);
   const isError = useSelector(selectItemsError);
 
@@ -20,21 +21,16 @@ export default function TeachersPage() {
   }, [dispatch]);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div className={css.pageCont}>Loading...</div>;
   }
 
   if (isError) {
-    return <div>Error: {isError}</div>;
+    return <div className={css.pageCont}>Error: {isError}</div>;
   }
 
   return (
-    <div>
-      <h1>Teachers</h1>
-      <ul>
-        {teachers.map((teacher) => (
-          <li key={teacher.id}>{teacher.name}</li>
-        ))}
-      </ul>
+    <div className={css.pageCont}>
+      <TeachersList />
     </div>
   );
 }
