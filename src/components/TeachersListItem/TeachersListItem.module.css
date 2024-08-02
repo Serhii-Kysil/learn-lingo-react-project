@@ -1,0 +1,78 @@
+.listItem {
+  background-color: #ffffff;
+  display: flex;
+
+  width: 1184px;
+}
+
+.imgCont {
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
+  border: 3px solid #fbe9ba;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 48px;
+}
+.img {
+  width: 96px;
+  height: 96px;
+  border-radius: 100px;
+}
+
+.nameBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.span {
+  color: #8a8a89;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+.name {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+.infoBlock {
+  display: flex;
+}
+
+.topBlock {
+  display: flex;
+}
+
+.lessonsFormat {
+  display: flex;
+  gap: 8px;
+
+  align-items: flex-start;
+  width: 132px;
+}
+.bookIcon {
+  width: 16px;
+  height: 16px;
+}
+.format {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+.mainBar {
+  display: flex;
+  gap: 16px;
+}
+.line {
+  height: 16px;
+  width: 1px;
+  border: 1px solid #12141733;
+  display: flex;
+}
