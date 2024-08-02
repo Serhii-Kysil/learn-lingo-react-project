@@ -1,6 +1,7 @@
 .listItem {
   background-color: #ffffff;
   display: flex;
+  gap: 48px;
 
   width: 1184px;
 }
@@ -13,8 +14,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  margin-right: 48px;
 }
 .img {
   width: 96px;
@@ -43,7 +42,7 @@
 }
 .infoBlock {
   display: flex;
-  width: 100%;
+  width: 968px;
 }
 
 .topBlock {
@@ -79,7 +78,7 @@
 }
 .line {
   height: 16px;
-  width: 1px;
+
   border: 1px solid #12141733;
   display: flex;
 }
@@ -115,4 +114,12 @@
   font-weight: 500;
   line-height: 24px;
   text-align: left;
+}
+.heart {
+  width: 26px;
+  height: 26px;
+}
+.topBar {
+  display: flex;
+  gap: 64px;
 }
