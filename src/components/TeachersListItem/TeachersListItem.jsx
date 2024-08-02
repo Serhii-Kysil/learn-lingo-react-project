@@ -67,6 +67,7 @@ export const TeachersListItem = ({ teacher }) => {
             <span className={css.aboutSpan}>{teacher.conditions}</span>
           </p>
         </div>
+        <button className={css.loadMoreBtn}>Read more</button>
       </div>
     </li>
   );

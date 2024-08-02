@@ -44,7 +44,7 @@
   display: flex;
   width: 968px;
   flex-direction: column;
-  gap: 32px;
+  align-items: flex-start;
 }
 
 .topBlock {
@@ -52,6 +52,7 @@
   height: 56px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 32px;
 }
 
 .lessonsFormat {
@@ -125,6 +126,11 @@
   display: flex;
   gap: 64px;
 }
+
+.aboutBlock {
+  margin-bottom: 16px;
+}
+
 .aboutSpeaks,
 .aboutLesson,
 .aboutCond {
@@ -146,4 +152,17 @@
 }
 .aboutSpeaksSpan {
   text-decoration: underline;
+}
+.loadMoreBtn {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-decoration: underline;
+  cursor: pointer;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  margin-bottom: 32px;
 }
