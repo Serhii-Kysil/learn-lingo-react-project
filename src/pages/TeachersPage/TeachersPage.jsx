@@ -1,4 +1,9 @@
-import { fetchTeachers } from "../../redux/Teachers/TeacherSlice";
+import { fetchTeachers } from "../../redux/Teachers/operations";
+import {
+  selectTeachers,
+  selectIsItemsLoading,
+  selectItemsError,
+} from "../../redux/Teachers/selector";
 
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
@@ -6,27 +11,27 @@ import { useEffect } from "react";
 export default function TeachersPage() {
   const dispatch = useDispatch();
 
-  const { items, isItemsLoading, itemsError } = useSelector(
-    (state) => state.teachers
-  );
+  const teachers = useSelector(selectTeachers);
+  const isLoading = useSelector(selectIsItemsLoading);
+  const isError = useSelector(selectItemsError);
 
   useEffect(() => {
     dispatch(fetchTeachers());
   }, [dispatch]);
 
-  if (isItemsLoading) {
+  if (isLoading) {
     return <div>Loading...</div>;
   }
 
-  if (itemsError) {
-    return <div>Error: {itemsError}</div>;
+  if (isError) {
+    return <div>Error: {isError}</div>;
   }
 
   return (
     <div>
       <h1>Teachers</h1>
       <ul>
-        {items.map((teacher) => (
+        {teachers.map((teacher) => (
           <li key={teacher.id}>{teacher.name}</li>
         ))}
       </ul>
