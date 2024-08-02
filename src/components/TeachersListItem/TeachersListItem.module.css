@@ -43,6 +43,8 @@
 .infoBlock {
   display: flex;
   width: 968px;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .topBlock {
@@ -122,4 +124,26 @@
 .topBar {
   display: flex;
   gap: 64px;
+}
+.aboutSpeaks,
+.aboutLesson,
+.aboutCond {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+
+  color: #8a8a89;
+}
+.aboutSpeaks {
+  margin-bottom: 8px;
+}
+.aboutLesson {
+  margin-bottom: 8px;
+}
+.aboutSpan,
+.aboutSpeaksSpan {
+  color: #121417;
+}
+.aboutSpeaksSpan {
+  text-decoration: underline;
 }

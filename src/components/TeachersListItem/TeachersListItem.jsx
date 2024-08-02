@@ -51,6 +51,22 @@ export const TeachersListItem = ({ teacher }) => {
             <FaRegHeart className={css.heart} />
           </div>
         </div>
+        <div className={css.aboutBlock}>
+          <p className={css.aboutSpeaks}>
+            Speaks:{" "}
+            <span className={css.aboutSpeaksSpan}>
+              {teacher.languages.join(", ")}
+            </span>
+          </p>
+          <p className={css.aboutLesson}>
+            Lesson Info:{" "}
+            <span className={css.aboutSpan}>{teacher.lesson_info}</span>
+          </p>
+          <p className={css.aboutCond}>
+            Conditions:{" "}
+            <span className={css.aboutSpan}>{teacher.conditions}</span>
+          </p>
+        </div>
       </div>
     </li>
   );
