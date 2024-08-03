@@ -73,7 +73,7 @@ export const BookingForm = ({ onClose }) => {
           />
           Culture, travel or hobby
         </label>
-        {errors.reason && <p>{errors.reason.message}</p>}
+        {errors.reason && <p className={css.error}>{errors.reason.message}</p>}
       </div>
 
       <div className={css.userDataBlock}>
@@ -84,7 +84,9 @@ export const BookingForm = ({ onClose }) => {
             {...register("fullName")}
             className={css.dataInput}
           />
-          {errors.fullName && <p>{errors.fullName.message}</p>}
+          {errors.fullName && (
+            <p className={css.error}>{errors.fullName.message}</p>
+          )}
         </div>
 
         <div className={css.emailBlock}>
@@ -94,7 +96,7 @@ export const BookingForm = ({ onClose }) => {
             {...register("email")}
             className={css.dataInput}
           />
-          {errors.email && <p>{errors.email.message}</p>}
+          {errors.email && <p className={css.error}>{errors.email.message}</p>}
         </div>
 
         <div className={css.phoneBlock}>
@@ -104,7 +106,9 @@ export const BookingForm = ({ onClose }) => {
             {...register("phoneNumber")}
             className={css.dataInput}
           />
-          {errors.phoneNumber && <p>{errors.phoneNumber.message}</p>}
+          {errors.phoneNumber && (
+            <p className={css.error}>{errors.phoneNumber.message}</p>
+          )}
         </div>
       </div>
 
