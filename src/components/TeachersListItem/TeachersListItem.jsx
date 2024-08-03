@@ -10,9 +10,11 @@ import { FaHeart } from "react-icons/fa";
 
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { SimpleModal } from "../SimpleModal/SimpleModal";
 
 export const TeachersListItem = ({ teacher }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [modalBookIsOpen, setModalBookOpen] = useState(false);
 
   const dispatch = useDispatch();
   const favorites = useSelector((state) => state.teachers.favorite);
@@ -141,7 +143,11 @@ export const TeachersListItem = ({ teacher }) => {
         </div>
 
         {!isExpanded && (
-          <button className={css.loadMoreBtn} onClick={handleReadMoreClick}>
+          <button
+            className={css.loadMoreBtn}
+            onClick={handleReadMoreClick}
+            type="button"
+          >
             Read more
           </button>
         )}
@@ -154,11 +160,31 @@ export const TeachersListItem = ({ teacher }) => {
           ))}
         </div>
         {isExpanded && (
-          <button className={css.bookBtn} type="button">
+          <button
+            className={css.bookBtn}
+            type="button"
+            onClick={() => setModalBookOpen(true)}
+          >
             Book trial lesson
           </button>
         )}
       </div>
+
+      <SimpleModal
+        isOpen={modalBookIsOpen}
+        onClose={() => setModalBookOpen(false)}
+      >
+        <div className={css.modalCont}>
+          <div className={css.textBlock}>
+            <h2 className={css.modalTitle}>Book trial lesson</h2>
+            <p className={css.modalDesc}>
+              Our experienced tutor will assess your current language level,
+              discuss your learning goals, and tailor the lesson to your
+              specific needs.
+            </p>
+          </div>
+        </div>
+      </SimpleModal>
     </li>
   );
 };
