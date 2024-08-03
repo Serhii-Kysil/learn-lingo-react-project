@@ -238,6 +238,8 @@
 .levelsBlock {
   display: flex;
   gap: 8px;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 .levelTag {
   border-radius: 35px;
@@ -247,5 +249,19 @@
   font-size: 14px;
   font-weight: 600;
   line-height: 16px;
+  text-align: left;
+}
+
+.bookBtn {
+  padding: 16px 48px 16px 48px;
+  background: #f4c550;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
   text-align: left;
 }

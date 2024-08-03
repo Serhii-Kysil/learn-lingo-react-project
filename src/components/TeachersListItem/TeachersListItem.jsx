@@ -140,9 +140,12 @@ export const TeachersListItem = ({ teacher }) => {
           )}
         </div>
 
-        <button className={css.loadMoreBtn} onClick={handleReadMoreClick}>
-          {isExpanded ? "Read less" : "Read more"}
-        </button>
+        {!isExpanded && (
+          <button className={css.loadMoreBtn} onClick={handleReadMoreClick}>
+            Read more
+          </button>
+        )}
+
         <div className={css.levelsBlock}>
           {teacher.levels.map((level, index) => (
             <span key={index} className={css.levelTag}>
@@ -150,6 +153,11 @@ export const TeachersListItem = ({ teacher }) => {
             </span>
           ))}
         </div>
+        {isExpanded && (
+          <button className={css.bookBtn} type="button">
+            Book trial lesson
+          </button>
+        )}
       </div>
     </li>
   );
