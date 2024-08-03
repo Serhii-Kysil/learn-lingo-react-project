@@ -183,6 +183,21 @@ export const TeachersListItem = ({ teacher }) => {
               specific needs.
             </p>
           </div>
+
+          <div className={css.modalTeacher}>
+            <img
+              src={teacher.avatar_url}
+              alt="teacher avatar"
+              className={css.modalAvatar}
+            />
+
+            <div className={css.teacherNameBlock}>
+              <span className={css.modalNameSpan}>Your teacher</span>
+              <p
+                className={css.modalName}
+              >{`${teacher.name} ${teacher.surname} `}</p>
+            </div>
+          </div>
         </div>
       </SimpleModal>
     </li>

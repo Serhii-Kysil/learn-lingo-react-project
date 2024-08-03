@@ -1,0 +1,86 @@
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+
+const schema = yup.object().shape({
+  reason: yup.string().required("Please select a reason"),
+  fullName: yup.string().required("Full Name is required"),
+  email: yup.string().email("Invalid email").required("Email is required"),
+  phoneNumber: yup.string().required("Phone number is required"),
+});
+
+export const BookingForm = ({ onClose }) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
+
+  const onSubmit = (data) => {
+    onClose();
+    console.log(data);
+  };
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div>
+        <label>
+          <input
+            type="radio"
+            value="Career and business"
+            {...register("reason")}
+          />
+          Career and business
+        </label>
+        <label>
+          <input type="radio" value="Lesson for kids" {...register("reason")} />
+          Lesson for kids
+        </label>
+        <label>
+          <input type="radio" value="Living abroad" {...register("reason")} />
+          Living abroad
+        </label>
+        <label>
+          <input
+            type="radio"
+            value="Exams and coursework"
+            {...register("reason")}
+          />
+          Exams and coursework
+        </label>
+        <label>
+          <input
+            type="radio"
+            value="Culture, travel or hobby"
+            {...register("reason")}
+          />
+          Culture, travel or hobby
+        </label>
+        {errors.reason && <p>{errors.reason.message}</p>}
+      </div>
+
+      <div>
+        <input type="text" placeholder="Full Name" {...register("fullName")} />
+        {errors.fullName && <p>{errors.fullName.message}</p>}
+      </div>
+
+      <div>
+        <input type="email" placeholder="Email" {...register("email")} />
+        {errors.email && <p>{errors.email.message}</p>}
+      </div>
+
+      <div>
+        <input
+          type="text"
+          placeholder="Phone number"
+          {...register("phoneNumber")}
+        />
+        {errors.phoneNumber && <p>{errors.phoneNumber.message}</p>}
+      </div>
+
+      <button type="submit">Book</button>
+    </form>
+  );
+};

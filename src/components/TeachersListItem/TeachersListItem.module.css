@@ -265,3 +265,51 @@
   line-height: 28px;
   text-align: left;
 }
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.modalTitle {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.modalDesc {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+}
+.modalTeacher {
+  display: flex;
+  gap: 14px;
+}
+
+.modalAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 100px;
+}
+.teacherNameBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.modalNameSpan {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: left;
+  color: #8a8a89;
+}
+.modalName {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
