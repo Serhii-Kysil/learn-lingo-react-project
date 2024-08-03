@@ -33,41 +33,49 @@ export const RegistrationForm = ({ onClose }) => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={css.form}>
       <div className={css.inputsContainer}>
-        <input
-          {...register("name")}
-          placeholder="Name"
-          className={css.nameInput}
-        />
-        <p className={css.error}>{errors.name?.message}</p>
-
-        <input
-          {...register("email")}
-          placeholder="Email"
-          className={css.emailInput}
-        />
-        <p className={css.error}>{errors.email?.message}</p>
-
-        <div className={css.passwordContainer}>
+        <div className={css.inputWrapper}>
           <input
-            {...register("password")}
-            type={isPasswordVisible ? "text" : "password"}
-            placeholder="Password"
-            className={css.passwordInput}
+            {...register("name")}
+            placeholder="Name"
+            className={css.nameInput}
           />
-          <button
-            type="button"
-            onClick={() => setPasswordVisible(!isPasswordVisible)}
-            className={css.eyeButton}
-            aria-label={isPasswordVisible ? "Hide password" : "Show password"}
-          >
-            {isPasswordVisible ? (
-              <FaEye className={css.eye} />
-            ) : (
-              <FaEyeSlash className={css.eye} />
-            )}
-          </button>
+          {errors.name && <p className={css.error}>{errors.name?.message}</p>}
         </div>
-        <p className={css.error}>{errors.password?.message}</p>
+
+        <div className={css.inputWrapper}>
+          <input
+            {...register("email")}
+            placeholder="Email"
+            className={css.emailInput}
+          />
+          {errors.email && <p className={css.error}>{errors.email?.message}</p>}
+        </div>
+
+        <div className={css.inputWrapper}>
+          <div className={css.passwordContainer}>
+            <input
+              {...register("password")}
+              type={isPasswordVisible ? "text" : "password"}
+              placeholder="Password"
+              className={css.passwordInput}
+            />
+            <button
+              type="button"
+              onClick={() => setPasswordVisible(!isPasswordVisible)}
+              className={css.eyeButton}
+              aria-label={isPasswordVisible ? "Hide password" : "Show password"}
+            >
+              {isPasswordVisible ? (
+                <FaEye className={css.eye} />
+              ) : (
+                <FaEyeSlash className={css.eye} />
+              )}
+            </button>
+          </div>
+          {errors.password && (
+            <p className={css.error}>{errors.password?.message}</p>
+          )}
+        </div>
       </div>
 
       <button type="submit" className={css.submitBtn}>
