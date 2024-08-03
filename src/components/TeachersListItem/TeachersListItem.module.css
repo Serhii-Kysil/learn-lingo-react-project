@@ -4,6 +4,9 @@
   gap: 48px;
 
   width: 1184px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-right: 24px;
 }
 
 .imgCont {
@@ -221,4 +224,19 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.levelsBlock {
+  display: flex;
+  gap: 8px;
+}
+.levelTag {
+  border-radius: 35px;
+  border: 1px solid #12141733;
+  padding: 8px 12px 8px 12px;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: left;
 }

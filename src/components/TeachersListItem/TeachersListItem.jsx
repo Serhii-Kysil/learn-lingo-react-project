@@ -77,13 +77,7 @@ export const TeachersListItem = ({ teacher }) => {
             Conditions:{" "}
             <span className={css.aboutSpan}>{teacher.conditions}</span>
           </p>
-          <div className={css.levelsBlock}>
-            {teacher.levels.map((level, index) => (
-              <span key={index} className={css.levelTag}>
-                #{level}
-              </span>
-            ))}
-          </div>
+
           {isExpanded && (
             <div className={css.expandedBlock}>
               <p className={css.expandedInfo}>{teacher.experience}</p>
@@ -120,6 +114,13 @@ export const TeachersListItem = ({ teacher }) => {
         <button className={css.loadMoreBtn} onClick={handleReadMoreClick}>
           {isExpanded ? "Read less" : "Read more"}
         </button>
+        <div className={css.levelsBlock}>
+          {teacher.levels.map((level, index) => (
+            <span key={index} className={css.levelTag}>
+              #{level}
+            </span>
+          ))}
+        </div>
       </div>
     </li>
   );
