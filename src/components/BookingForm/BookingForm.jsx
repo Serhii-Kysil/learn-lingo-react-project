@@ -33,15 +33,26 @@ export const BookingForm = ({ onClose }) => {
             type="radio"
             value="Career and business"
             {...register("reason")}
+            className={css.radioInput}
           />
           Career and business
         </label>
         <label>
-          <input type="radio" value="Lesson for kids" {...register("reason")} />
+          <input
+            type="radio"
+            value="Lesson for kids"
+            {...register("reason")}
+            className={css.radioInput}
+          />
           Lesson for kids
         </label>
         <label>
-          <input type="radio" value="Living abroad" {...register("reason")} />
+          <input
+            type="radio"
+            value="Living abroad"
+            {...register("reason")}
+            className={css.radioInput}
+          />
           Living abroad
         </label>
         <label>
@@ -49,6 +60,7 @@ export const BookingForm = ({ onClose }) => {
             type="radio"
             value="Exams and coursework"
             {...register("reason")}
+            className={css.radioInput}
           />
           Exams and coursework
         </label>
@@ -57,6 +69,7 @@ export const BookingForm = ({ onClose }) => {
             type="radio"
             value="Culture, travel or hobby"
             {...register("reason")}
+            className={css.radioInput}
           />
           Culture, travel or hobby
         </label>

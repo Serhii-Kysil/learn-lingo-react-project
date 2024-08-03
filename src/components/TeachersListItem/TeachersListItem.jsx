@@ -199,7 +199,9 @@ export const TeachersListItem = ({ teacher }) => {
               >{`${teacher.name} ${teacher.surname} `}</p>
             </div>
           </div>
-
+          <h3 className={css.reasonHeader}>
+            What is your main reason for learning English?
+          </h3>
           <BookingForm onClose={() => setModalBookOpen(false)} />
         </div>
       </SimpleModal>

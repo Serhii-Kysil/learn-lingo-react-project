@@ -30,3 +30,12 @@
   outline: none;
   cursor: pointer;
 }
+
+.radioInput:checked {
+  background-color: #f4c550;
+  border: 1px solid #f4c550;
+}
+.radioInput:checked {
+  background-color: #f4c550;
+  border: 1px solid #f4c550;
+}
