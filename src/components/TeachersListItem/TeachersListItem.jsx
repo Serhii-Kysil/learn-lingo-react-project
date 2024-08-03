@@ -11,6 +11,7 @@ import { FaHeart } from "react-icons/fa";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { SimpleModal } from "../SimpleModal/SimpleModal";
+import { BookingForm } from "../BookingForm/BookingForm";
 
 export const TeachersListItem = ({ teacher }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -198,6 +199,8 @@ export const TeachersListItem = ({ teacher }) => {
               >{`${teacher.name} ${teacher.surname} `}</p>
             </div>
           </div>
+
+          <BookingForm onClose={() => setModalBookOpen(false)} />
         </div>
       </SimpleModal>
     </li>

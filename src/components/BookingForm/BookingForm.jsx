@@ -2,6 +2,8 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
+import css from "./BookingForm.module.css";
+
 const schema = yup.object().shape({
   reason: yup.string().required("Please select a reason"),
   fullName: yup.string().required("Full Name is required"),
@@ -24,8 +26,8 @@ export const BookingForm = ({ onClose }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div>
+    <form onSubmit={handleSubmit(onSubmit)} className={css.formCont}>
+      <div className={css.radioBlock}>
         <label>
           <input
             type="radio"
@@ -61,26 +63,34 @@ export const BookingForm = ({ onClose }) => {
         {errors.reason && <p>{errors.reason.message}</p>}
       </div>
 
-      <div>
-        <input type="text" placeholder="Full Name" {...register("fullName")} />
-        {errors.fullName && <p>{errors.fullName.message}</p>}
+      <div className={css.userDataBlock}>
+        <div className={css.nameBlock}>
+          <input
+            type="text"
+            placeholder="Full Name"
+            {...register("fullName")}
+          />
+          {errors.fullName && <p>{errors.fullName.message}</p>}
+        </div>
+
+        <div className={css.emailBlock}>
+          <input type="email" placeholder="Email" {...register("email")} />
+          {errors.email && <p>{errors.email.message}</p>}
+        </div>
+
+        <div className={css.phoneBlock}>
+          <input
+            type="text"
+            placeholder="Phone number"
+            {...register("phoneNumber")}
+          />
+          {errors.phoneNumber && <p>{errors.phoneNumber.message}</p>}
+        </div>
       </div>
 
-      <div>
-        <input type="email" placeholder="Email" {...register("email")} />
-        {errors.email && <p>{errors.email.message}</p>}
-      </div>
-
-      <div>
-        <input
-          type="text"
-          placeholder="Phone number"
-          {...register("phoneNumber")}
-        />
-        {errors.phoneNumber && <p>{errors.phoneNumber.message}</p>}
-      </div>
-
-      <button type="submit">Book</button>
+      <button type="submit" className={css.bookBtn}>
+        Book
+      </button>
     </form>
   );
 };

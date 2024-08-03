@@ -1,0 +1,32 @@
+.formCont {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.radioBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.bookBtn {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: left;
+
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  border: none;
+  background: #f4c550;
+  border-radius: 12px;
+  outline: none;
+  cursor: pointer;
+}
