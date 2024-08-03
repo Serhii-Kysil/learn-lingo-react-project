@@ -1,14 +1,33 @@
 /* eslint-disable react/prop-types */
 import css from "./TeachersListItem.module.css";
 
+import { addFavorite, removeFavorite } from "../../redux/Teachers/TeacherSlice";
+
 import { FiBookOpen } from "react-icons/fi";
 import { IoStar } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 export const TeachersListItem = ({ teacher }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+
+  const dispatch = useDispatch();
+  const favorites = useSelector((state) => state.teachers.favorite);
+
+  const isFavorite = favorites.some(
+    (fav) => fav.avatar_url === teacher.avatar_url
+  );
+
+  const handleFavoriteClick = () => {
+    if (isFavorite) {
+      dispatch(removeFavorite(teacher.avatar_url));
+    } else {
+      dispatch(addFavorite(teacher));
+    }
+  };
 
   const handleReadMoreClick = () => {
     setIsExpanded(!isExpanded);
@@ -59,7 +78,17 @@ export const TeachersListItem = ({ teacher }) => {
                 <span className={css.priceSpan}>{teacher.price_per_hour}$</span>
               </p>
             </div>
-            <FaRegHeart className={css.heart} />
+
+            {isFavorite && (
+              <FaHeart
+                className={css.pickedHeart}
+                onClick={handleFavoriteClick}
+              />
+            )}
+
+            {!isFavorite && (
+              <FaRegHeart className={css.heart} onClick={handleFavoriteClick} />
+            )}
           </div>
         </div>
         <div className={css.aboutBlock}>

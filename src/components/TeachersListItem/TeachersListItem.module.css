@@ -133,6 +133,15 @@
 .heart {
   width: 26px;
   height: 26px;
+  cursor: pointer;
+  transition: var(--animation);
+}
+.pickedHeart {
+  width: 26px;
+  height: 26px;
+  fill: #f4c550;
+  cursor: pointer;
+  transition: var(--animation);
 }
 .topBar {
   display: flex;

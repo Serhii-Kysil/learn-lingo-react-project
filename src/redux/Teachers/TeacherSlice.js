@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-
 import { fetchTeachers } from "./operations";
 
 const handleItemsPending = (state) => {
@@ -25,7 +24,7 @@ const teacherSlice = createSlice({
     },
     removeFavorite: (state, action) => {
       state.favorite = state.favorite.filter(
-        (teacher) => teacher._id !== action.payload
+        (teacher) => teacher.avatar_url !== action.payload
       );
     },
   },
