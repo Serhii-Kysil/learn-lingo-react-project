@@ -53,3 +53,6 @@
   text-align: left;
   cursor: pointer;
 }
+.link {
+  text-decoration: none;
+}

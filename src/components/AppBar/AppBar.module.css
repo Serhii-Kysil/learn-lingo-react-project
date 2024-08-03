@@ -24,3 +24,8 @@
   letter-spacing: -0.02em;
   text-align: left;
 }
+.link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+}

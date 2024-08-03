@@ -1,5 +1,7 @@
 import css from "./WelcomeInfo.module.css";
 
+import { NavLink } from "react-router-dom";
+
 export const WelcomeInfo = () => {
   return (
     <div className={css.welcomeInfo}>
@@ -12,7 +14,9 @@ export const WelcomeInfo = () => {
         Elevate your language proficiency to new heights by connecting with
         highly qualified and experienced tutors.
       </p>
-      <button className={css.btn}>Get started</button>
+      <NavLink className={css.link} to="/teachers">
+        <button className={css.btn}>Get started</button>
+      </NavLink>
     </div>
   );
 };
