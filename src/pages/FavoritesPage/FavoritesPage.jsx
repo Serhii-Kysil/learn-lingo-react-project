@@ -12,9 +12,6 @@ export default function FavoritesPage() {
     <>
       <div className={css.pageCont}>
         <TeachersList items={favotites} />
-        {/* <button type="button" className={css.loadMoreBtn}>
-          {isLoading ? "Loading..." : "Load more"}
-        </button> */}
       </div>
     </>
   );

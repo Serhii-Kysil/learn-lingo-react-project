@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { TeachersListItem } from "../TeachersListItem/TeachersListItem";
 
 import css from "./TeachersList.module.css";

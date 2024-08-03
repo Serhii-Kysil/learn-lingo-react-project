@@ -160,6 +160,7 @@ export const TeachersListItem = ({ teacher }) => {
             </span>
           ))}
         </div>
+
         {isExpanded && (
           <button
             className={css.bookBtn}

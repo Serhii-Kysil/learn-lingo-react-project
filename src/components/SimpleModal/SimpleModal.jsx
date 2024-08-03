@@ -18,12 +18,15 @@ export const SimpleModal = ({ isOpen, onClose, children }) => {
 
     if (isOpen) {
       document.addEventListener("keydown", handleKeyDown);
+      document.body.classList.add("no-scroll"); // Додаємо клас для блокування скролінгу
     } else {
       document.removeEventListener("keydown", handleKeyDown);
+      document.body.classList.remove("no-scroll"); // Видаляємо клас для блокування скролінгу
     }
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
+      document.body.classList.remove("no-scroll"); // Видаляємо клас для блокування скролінгу
     };
   }, [isOpen, onClose]);
 
