@@ -31,6 +31,9 @@ export default function TeachersPage() {
   return (
     <div className={css.pageCont}>
       <TeachersList />
+      <button type="button" className={css.loadMoreBtn}>
+        {isLoading ? "Loading..." : "Load more"}
+      </button>
     </div>
   );
 }
