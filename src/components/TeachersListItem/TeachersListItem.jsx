@@ -23,7 +23,7 @@ export const TeachersListItem = ({ teacher }) => {
           className={css.img}
         />
         <svg className={css.avatarDot}>
-          <use href="/public/symbol-defs.svg#icon-dot"></use>
+          <use href="/symbol-defs.svg#icon-dot"></use>
         </svg>
       </div>
       <div className={css.infoBlock}>
@@ -86,7 +86,7 @@ export const TeachersListItem = ({ teacher }) => {
                   <div key={index} className={css.review}>
                     <div className={css.avatarBlock}>
                       <img
-                        src="/public/user.png"
+                        src="/user.png"
                         alt="student"
                         className={css.studentAvatar}
                       />
