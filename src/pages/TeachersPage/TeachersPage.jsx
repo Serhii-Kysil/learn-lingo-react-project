@@ -2,6 +2,7 @@ import { fetchTeachers } from "../../redux/Teachers/operations";
 import {
   selectIsItemsLoading,
   selectItemsError,
+  selectTeachers,
 } from "../../redux/Teachers/selector";
 
 import { useDispatch, useSelector } from "react-redux";
@@ -13,6 +14,7 @@ import { TeachersList } from "../../components/TeachersList/TeachersList";
 export default function TeachersPage() {
   const dispatch = useDispatch();
 
+  const teachers = useSelector(selectTeachers);
   const isLoading = useSelector(selectIsItemsLoading);
   const isError = useSelector(selectItemsError);
 
@@ -30,7 +32,7 @@ export default function TeachersPage() {
 
   return (
     <div className={css.pageCont}>
-      <TeachersList />
+      <TeachersList items={teachers} />
       <button type="button" className={css.loadMoreBtn}>
         {isLoading ? "Loading..." : "Load more"}
       </button>

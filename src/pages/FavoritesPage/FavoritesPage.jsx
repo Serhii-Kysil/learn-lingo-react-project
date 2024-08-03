@@ -1,7 +1,21 @@
+import css from "./FavoritesPage.module.css";
+
+import { selectFavorites } from "../../redux/Teachers/selector";
+import { TeachersList } from "../../components/TeachersList/TeachersList";
+
+import { useSelector } from "react-redux";
+
 export default function FavoritesPage() {
+  const favotites = useSelector(selectFavorites);
+
   return (
     <>
-      <h1>FAVORITEPAGE</h1>
+      <div className={css.pageCont}>
+        <TeachersList items={favotites} />
+        {/* <button type="button" className={css.loadMoreBtn}>
+          {isLoading ? "Loading..." : "Load more"}
+        </button> */}
+      </div>
     </>
   );
 }
