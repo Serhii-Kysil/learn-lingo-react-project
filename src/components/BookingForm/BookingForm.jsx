@@ -82,12 +82,18 @@ export const BookingForm = ({ onClose }) => {
             type="text"
             placeholder="Full Name"
             {...register("fullName")}
+            className={css.dataInput}
           />
           {errors.fullName && <p>{errors.fullName.message}</p>}
         </div>
 
         <div className={css.emailBlock}>
-          <input type="email" placeholder="Email" {...register("email")} />
+          <input
+            type="email"
+            placeholder="Email"
+            {...register("email")}
+            className={css.dataInput}
+          />
           {errors.email && <p>{errors.email.message}</p>}
         </div>
 
@@ -96,6 +102,7 @@ export const BookingForm = ({ onClose }) => {
             type="text"
             placeholder="Phone number"
             {...register("phoneNumber")}
+            className={css.dataInput}
           />
           {errors.phoneNumber && <p>{errors.phoneNumber.message}</p>}
         </div>
