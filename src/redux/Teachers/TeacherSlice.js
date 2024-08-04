@@ -18,6 +18,7 @@ const teacherSlice = createSlice({
     itemsError: null,
     favorite: [],
     lastKey: null,
+    hasMore: true,
   },
   reducers: {
     addFavorite: (state, action) => {
@@ -35,7 +36,11 @@ const teacherSlice = createSlice({
       .addCase(fetchTeachers.fulfilled, (state, action) => {
         state.isItemsLoading = false;
         state.items = [...action.payload.data];
-        state.lastKey = action.payload.lastKey; // Update lastKey
+        state.lastKey = action.payload.lastKey;
+
+        if (action.payload.data.length < 4) {
+          state.hasMore = false;
+        }
       })
       .addCase(fetchTeachers.rejected, handleItemsRejected);
   },

@@ -5,6 +5,7 @@ import {
   selectTeachers,
   selectCurrentPage,
   selectLastKey,
+  selectHasMore,
 } from "../../redux/Teachers/selector";
 
 import { useDispatch, useSelector } from "react-redux";
@@ -21,6 +22,7 @@ export default function TeachersPage() {
   const isError = useSelector(selectItemsError);
   const currentPage = useSelector(selectCurrentPage);
   const lastKey = useSelector(selectLastKey);
+  const hasMore = useSelector(selectHasMore);
 
   const [page, setPage] = useState(1);
 
@@ -49,13 +51,16 @@ export default function TeachersPage() {
   return (
     <div className={css.pageCont}>
       <TeachersList items={teachers} />
-      <button
-        type="button"
-        className={css.loadMoreBtn}
-        onClick={handleLoadMore}
-      >
-        {isLoading ? "Loading..." : "Load more"}
-      </button>
+      {hasMore && (
+        <button
+          type="button"
+          className={css.loadMoreBtn}
+          onClick={handleLoadMore}
+          disabled={isLoading}
+        >
+          {isLoading ? "Loading..." : "Load more"}
+        </button>
+      )}
     </div>
   );
 }
