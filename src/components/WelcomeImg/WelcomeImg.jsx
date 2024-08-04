@@ -5,9 +5,9 @@ export const WelcomeImg = () => {
     <div className={css.imgCont}>
       <img
         className={css.img}
-        src="/public/main-img@1x.jpg"
+        src="/main-img@1x.jpg"
         alt="welcome-img"
-        srcSet="/public/main-img@2x.jpg"
+        srcSet="/main-img@2x.jpg"
       />
     </div>
   );

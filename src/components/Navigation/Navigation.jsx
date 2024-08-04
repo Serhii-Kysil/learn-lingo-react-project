@@ -7,17 +7,34 @@ export const Navigation = () => {
 
   return (
     <nav className={css.nav}>
-      <NavLink className={css.link} to="/">
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+          isActive ? `${css.link} ${css.active}` : css.link
+        }
+      >
         <button className={css.btn}>Home</button>
       </NavLink>
-      <NavLink className={css.link} to="/teachers">
+      <NavLink
+        to="/teachers"
+        className={({ isActive }) =>
+          isActive ? `${css.link} ${css.active}` : css.link
+        }
+      >
         <button className={css.btn}>Teachers</button>
       </NavLink>
+
       {/* {isLoggedIn && (
-        <NavLink className={css.link} to="/favorites">
-          <button className={css.btn}>Favorites</button>
-        </NavLink>
+        
       )} */}
+      <NavLink
+        className={({ isActive }) =>
+          isActive ? `${css.link} ${css.active}` : css.link
+        }
+        to="/favorites"
+      >
+        <button className={css.btn}>Favorites</button>
+      </NavLink>
     </nav>
   );
 };
