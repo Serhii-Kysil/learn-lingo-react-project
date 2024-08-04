@@ -25,7 +25,7 @@
   line-height: 56px;
   letter-spacing: -0.02em;
   text-align: left;
-  background: #cbded3;
+  background: #fbe9ba;
   border-radius: 20px;
 }
 .desc {
@@ -41,7 +41,7 @@
 .btn {
   width: 267px;
   display: flex;
-  background: #9fbaae;
+  background: #f4c550;
   padding: 16px 88px 16px 88px;
   border-radius: 12px;
   border: none;
