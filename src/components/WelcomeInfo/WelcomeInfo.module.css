@@ -52,6 +52,13 @@
   line-height: 28px;
   text-align: left;
   cursor: pointer;
+
+  transition: var(--animation);
+}
+
+.btn:hover,
+.btn:focus {
+  background: #ffdc86;
 }
 .link {
   text-decoration: none;

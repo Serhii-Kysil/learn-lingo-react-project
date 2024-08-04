@@ -19,9 +19,23 @@
   text-align: left;
 
   cursor: pointer;
+
+  transition: var(--animation);
 }
+
+.logBtn:hover,
+.logBtn:focus {
+  color: #f4c550;
+}
+
+.logBtn:hover .icon,
+.logBtn:focus .icon {
+  stroke: #121417;
+}
+
 .icon {
   stroke: #f4c550;
+  transition: var(--animation);
 }
 
 .regBtn {
@@ -39,6 +53,14 @@
   color: #ffffff;
 
   cursor: pointer;
+
+  transition: var(--animation);
+}
+
+.regBtn:hover,
+.regBtn:focus {
+  background: #f4c550;
+  color: #121417;
 }
 
 .modalCont {
