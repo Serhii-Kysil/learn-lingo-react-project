@@ -3,10 +3,12 @@ import {
   selectIsItemsLoading,
   selectItemsError,
   selectTeachers,
+  selectCurrentPage,
+  selectLastKey,
 } from "../../redux/Teachers/selector";
 
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import css from "./TeachersPage.module.css";
 import { TeachersList } from "../../components/TeachersList/TeachersList";
@@ -17,12 +19,26 @@ export default function TeachersPage() {
   const teachers = useSelector(selectTeachers);
   const isLoading = useSelector(selectIsItemsLoading);
   const isError = useSelector(selectItemsError);
+  const currentPage = useSelector(selectCurrentPage);
+  const lastKey = useSelector(selectLastKey);
+
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
-    dispatch(fetchTeachers());
+    dispatch(fetchTeachers({ page, lastKey: null }));
   }, [dispatch]);
 
-  if (isLoading) {
+  useEffect(() => {
+    if (page > 1) {
+      dispatch(fetchTeachers({ page, lastKey }));
+    }
+  }, [dispatch, page, lastKey]);
+
+  const handleLoadMore = () => {
+    setPage((prevPage) => prevPage + 1);
+  };
+
+  if (isLoading && currentPage === 0) {
     return <div className={css.pageCont}>Loading...</div>;
   }
 
@@ -33,7 +49,11 @@ export default function TeachersPage() {
   return (
     <div className={css.pageCont}>
       <TeachersList items={teachers} />
-      <button type="button" className={css.loadMoreBtn}>
+      <button
+        type="button"
+        className={css.loadMoreBtn}
+        onClick={handleLoadMore}
+      >
         {isLoading ? "Loading..." : "Load more"}
       </button>
     </div>

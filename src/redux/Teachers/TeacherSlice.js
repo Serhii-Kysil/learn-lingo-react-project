@@ -17,6 +17,7 @@ const teacherSlice = createSlice({
     isItemsLoading: false,
     itemsError: null,
     favorite: [],
+    lastKey: null,
   },
   reducers: {
     addFavorite: (state, action) => {
@@ -33,7 +34,8 @@ const teacherSlice = createSlice({
       .addCase(fetchTeachers.pending, handleItemsPending)
       .addCase(fetchTeachers.fulfilled, (state, action) => {
         state.isItemsLoading = false;
-        state.items = action.payload;
+        state.items = [...action.payload.data];
+        state.lastKey = action.payload.lastKey; // Update lastKey
       })
       .addCase(fetchTeachers.rejected, handleItemsRejected);
   },
