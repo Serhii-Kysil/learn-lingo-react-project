@@ -3,6 +3,7 @@ import { Navigation } from "../Navigation/Navigation";
 import { NavLink } from "react-router-dom";
 
 import css from "./AppBar.module.css";
+import { UserMenu } from "../UserMenu/UserMenu";
 
 export const AppBar = () => {
   return (
@@ -18,7 +19,8 @@ export const AppBar = () => {
 
       <Navigation />
       {/* {isLoggedIn ? <UserMenu /> : <AuthNav />} */}
-      <AuthNav />
+      {/* <AuthNav /> */}
+      <UserMenu />
     </header>
   );
 };

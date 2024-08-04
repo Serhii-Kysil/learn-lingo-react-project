@@ -1,0 +1,64 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logBtn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: var(--animation);
+}
+
+.logBtn:hover,
+.logBtn:focus {
+  color: #f4c550;
+}
+
+.logBtn:hover .icon,
+.logBtn:focus .icon {
+  stroke: #121417;
+}
+
+.icon {
+  stroke: #f4c550;
+  transition: var(--animation);
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border: 1px solid #12141733;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+.nameBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+}
+
+.userIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 40px;
+}

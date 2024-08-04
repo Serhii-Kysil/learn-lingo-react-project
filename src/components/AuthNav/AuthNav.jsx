@@ -13,11 +13,19 @@ export const AuthNav = () => {
 
   return (
     <div className={css.wrapper}>
-      <button className={css.logBtn} onClick={() => setModalLogInOpen(true)}>
+      <button
+        type="button"
+        className={css.logBtn}
+        onClick={() => setModalLogInOpen(true)}
+      >
         <FiLogIn className={css.icon} />
         Log in
       </button>
-      <button className={css.regBtn} onClick={() => setModalRegOpen(true)}>
+      <button
+        type="button"
+        className={css.regBtn}
+        onClick={() => setModalRegOpen(true)}
+      >
         Registration
       </button>
 
