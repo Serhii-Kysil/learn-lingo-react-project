@@ -15,7 +15,15 @@
   display: flex;
   align-items: center;
   gap: 8px;
+
+  transition: var(--animation);
 }
+
+.logoCont:hover,
+.logoCont:focus {
+  color: #f4c550;
+}
+
 .logoText {
   font-family: Roboto;
   font-size: 20px;
