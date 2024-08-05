@@ -16,7 +16,7 @@ export const AppBar = () => {
       <NavLink className={css.link} to="/">
         <div className={css.logoCont}>
           <svg className={css.svg}>
-            <use href="/public/symbol-defs.svg#icon-ukraine"></use>
+            <use href="symbol-defs.svg#icon-ukraine"></use>
           </svg>
           <span className={css.logoText}>LearnLingo</span>
         </div>
