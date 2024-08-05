@@ -12,8 +12,6 @@ export const UserMenu = () => {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
 
-  console.log(user);
-
   const handleLogout = () => {
     dispatch(logoutUser());
   };
@@ -24,8 +22,9 @@ export const UserMenu = () => {
         <FaUser className={css.userIcon} />
 
         <div className={css.nameBlock}>
-          <p>Name</p>
-          <p>Surname</p>
+          {/* <p>Name</p>
+          <p>Surname</p> */}
+          <p>{user.email}</p>
         </div>
       </div>
 
