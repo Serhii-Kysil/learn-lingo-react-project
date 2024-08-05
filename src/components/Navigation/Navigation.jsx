@@ -2,8 +2,11 @@ import css from "./Navigation.module.css";
 
 import { NavLink } from "react-router-dom";
 
+import { selectIsLoggedIn } from "../../redux/Auth/selector";
+import { useSelector } from "react-redux";
+
 export const Navigation = () => {
-  //   const { isLoggedIn } = useAuth();
+  const isLoggedIn = useSelector(selectIsLoggedIn);
 
   return (
     <nav className={css.nav}>
@@ -24,17 +27,16 @@ export const Navigation = () => {
         <button className={css.btn}>Teachers</button>
       </NavLink>
 
-      {/* {isLoggedIn && (
-        
-      )} */}
-      <NavLink
-        className={({ isActive }) =>
-          isActive ? `${css.link} ${css.active}` : css.link
-        }
-        to="/favorites"
-      >
-        <button className={css.btn}>Favorites</button>
-      </NavLink>
+      {isLoggedIn && (
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? `${css.link} ${css.active}` : css.link
+          }
+          to="/favorites"
+        >
+          <button className={css.btn}>Favorites</button>
+        </NavLink>
+      )}
     </nav>
   );
 };

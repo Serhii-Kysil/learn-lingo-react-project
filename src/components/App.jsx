@@ -5,6 +5,8 @@ import FavoritesPage from "../pages/FavoritesPage/FavoritesPage";
 import TeachersPage from "../pages/TeachersPage/TeachersPage";
 import { Layout } from "./Layout";
 
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
+
 function App() {
   return (
     <>
@@ -12,7 +14,14 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="/teachers" element={<TeachersPage />} />
-          <Route path="/favorites" element={<FavoritesPage />} />
+          <Route
+            path="/favorites"
+            element={
+              <PrivateRoute>
+                <FavoritesPage />
+              </PrivateRoute>
+            }
+          />
           <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>

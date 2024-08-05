@@ -24,8 +24,6 @@ export const AppBar = () => {
 
       <Navigation />
       {isLoggedIn ? <UserMenu /> : <AuthNav />}
-      {/* <AuthNav /> */}
-      {/* <UserMenu /> */}
     </header>
   );
 };
