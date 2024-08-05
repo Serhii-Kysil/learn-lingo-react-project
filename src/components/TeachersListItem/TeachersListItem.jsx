@@ -12,6 +12,8 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { SimpleModal } from "../SimpleModal/SimpleModal";
 import { BookingForm } from "../BookingForm/BookingForm";
+import { selectIsLoggedIn } from "../../redux/Auth/selector";
+import toast from "react-hot-toast";
 
 export const TeachersListItem = ({ teacher }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -19,16 +21,21 @@ export const TeachersListItem = ({ teacher }) => {
 
   const dispatch = useDispatch();
   const favorites = useSelector((state) => state.teachers.favorite);
+  const isLoggedIn = useSelector(selectIsLoggedIn);
 
   const isFavorite = favorites.some(
     (fav) => fav.avatar_url === teacher.avatar_url
   );
 
   const handleFavoriteClick = () => {
-    if (isFavorite) {
+    if (isFavorite && isLoggedIn) {
       dispatch(removeFavorite(teacher.avatar_url));
-    } else {
+    } else if (isLoggedIn) {
       dispatch(addFavorite(teacher));
+    }
+
+    if (!isLoggedIn) {
+      toast.error("This functionality is available only to authorised users");
     }
   };
 
