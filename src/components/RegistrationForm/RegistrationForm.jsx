@@ -1,9 +1,13 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import * as yup from "yup";
 import css from "./RegistrationForm.module.css";
+
+import { useDispatch } from "react-redux";
+import { registerUser } from "../../redux/Auth/AuthSlice";
 
 const schema = yup.object().shape({
   name: yup.string().required("Name is required").min(4),
@@ -16,6 +20,7 @@ const schema = yup.object().shape({
 
 export const RegistrationForm = ({ onClose }) => {
   const [isPasswordVisible, setPasswordVisible] = useState(false);
+  const dispatch = useDispatch();
 
   const {
     register,
@@ -27,7 +32,9 @@ export const RegistrationForm = ({ onClose }) => {
 
   const onSubmit = (data) => {
     console.log(data);
+
     onClose();
+    dispatch(registerUser(data));
   };
 
   return (

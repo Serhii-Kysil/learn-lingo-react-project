@@ -3,8 +3,9 @@ import { getAuth } from "firebase/auth";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_SOME_KEY,
+  apiKey: "AIzaSyCFgoEUvMxoc_KyUlVWXuLtVFfgYS9bm1Q",
   authDomain: "learn-lingo-ad84f.firebaseapp.com",
+  databaseURL: "https://learn-lingo-ad84f-default-rtdb.firebaseio.com",
   projectId: "learn-lingo-ad84f",
   storageBucket: "learn-lingo-ad84f.appspot.com",
   messagingSenderId: "563516086482",

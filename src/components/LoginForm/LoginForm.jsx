@@ -1,9 +1,13 @@
+/* eslint-disable react/prop-types */
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import * as yup from "yup";
 import css from "./LoginForm.module.css";
 import { useState } from "react";
+
+import { useDispatch } from "react-redux";
+import { loginUser } from "../../redux/Auth/AuthSlice";
 
 const schema = yup.object().shape({
   email: yup
@@ -16,6 +20,8 @@ const schema = yup.object().shape({
 export const LoginForm = ({ onClose }) => {
   const [isPasswordVisible, setPasswordVisible] = useState(false);
 
+  const dispatch = useDispatch();
+
   const {
     register,
     handleSubmit,
@@ -25,7 +31,7 @@ export const LoginForm = ({ onClose }) => {
   });
 
   const onSubmit = (data) => {
-    console.log(data);
+    dispatch(loginUser(data));
     onClose();
   };
 

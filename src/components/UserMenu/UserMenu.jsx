@@ -3,7 +3,21 @@ import css from "./UserMenu.module.css";
 import { FiLogIn } from "react-icons/fi";
 import { FaUser } from "react-icons/fa";
 
+import { selectUser } from "../../redux/Auth/selector";
+import { logoutUser } from "../../redux/Auth/AuthSlice";
+
+import { useSelector, useDispatch } from "react-redux";
+
 export const UserMenu = () => {
+  const user = useSelector(selectUser);
+  const dispatch = useDispatch();
+
+  console.log(user);
+
+  const handleLogout = () => {
+    dispatch(logoutUser());
+  };
+
   return (
     <div className={css.wrapper}>
       <div className={css.userInfo}>
@@ -15,7 +29,7 @@ export const UserMenu = () => {
         </div>
       </div>
 
-      <button className={css.logBtn} type="button">
+      <button className={css.logBtn} type="button" onClick={handleLogout}>
         Log Out
         <FiLogIn className={css.icon} />
       </button>

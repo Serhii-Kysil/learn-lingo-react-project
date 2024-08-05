@@ -24,7 +24,7 @@ const teacherPersistConfig = {
 const authPersistConfig = {
   key: "auth",
   storage,
-  whitelist: ["token"],
+  whitelist: ["token", "isLoggedIn", "user"],
 };
 
 export const store = configureStore({
