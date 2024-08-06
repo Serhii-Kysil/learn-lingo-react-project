@@ -1,9 +1,9 @@
 import { Box } from "@mui/material";
 import { useState } from "react";
 
-import LanguageDropdown from "../LanguageDropdown/LanguageDropdown";
-import KnowledgeLevelDropdown from "../KnowledgeLevelDropdown/KnowledgeLevelDropdown";
-import PriceDropdown from "../PriceDropdown/PriceDropdown";
+import { LanguageDropdown } from "../LanguageDropdown/LanguageDropdown";
+import { KnowledgeLevelDropdown } from "../KnowledgeLevelDropdown/KnowledgeLevelDropdown";
+import { PriceDropdown } from "../PriceDropdown/PriceDropdown";
 
 export const DropDownBlock = () => {
   const [language, setLanguage] = useState("English");

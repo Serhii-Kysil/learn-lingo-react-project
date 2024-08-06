@@ -13,6 +13,7 @@ import { useEffect, useState } from "react";
 
 import css from "./TeachersPage.module.css";
 import { TeachersList } from "../../components/TeachersList/TeachersList";
+import { DropDownBlock } from "../../components/DropDownBlock/DropDownBlock";
 
 export default function TeachersPage() {
   const dispatch = useDispatch();
@@ -50,6 +51,8 @@ export default function TeachersPage() {
 
   return (
     <div className={css.pageCont}>
+      <DropDownBlock />
+
       <TeachersList items={teachers} />
       {hasMore && (
         <button
