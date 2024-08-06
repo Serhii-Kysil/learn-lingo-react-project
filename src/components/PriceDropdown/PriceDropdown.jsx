@@ -6,7 +6,17 @@ import css from "./PriceDropdown.module.css";
 export const PriceDropdown = ({ price, setPrice }) => {
   return (
     <FormControl className={css.form}>
-      <InputLabel id="price-label">Price</InputLabel>
+      <InputLabel
+        id="price-label"
+        sx={{
+          color: "#8A8A89",
+          fontSize: "14px",
+          lineHeight: "18px",
+          fontWeight: "500",
+        }}
+      >
+        Price
+      </InputLabel>
       <Select
         labelId="price-label"
         value={price}

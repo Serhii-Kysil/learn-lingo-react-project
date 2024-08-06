@@ -6,7 +6,15 @@ import css from "./LanguageDropdown.module.css";
 export const LanguageDropdown = ({ language, setLanguage }) => {
   return (
     <FormControl className={css.form} sx={{ border: "none" }}>
-      <InputLabel id="language-label" className={css.label}>
+      <InputLabel
+        id="language-label"
+        sx={{
+          color: "#8A8A89",
+          fontSize: "14px",
+          lineHeight: "18px",
+          fontWeight: "500",
+        }}
+      >
         Languages
       </InputLabel>
       <Select

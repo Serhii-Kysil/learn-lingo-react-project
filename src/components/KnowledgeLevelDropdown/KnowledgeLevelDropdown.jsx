@@ -6,7 +6,17 @@ import css from "./KnowledgeLevelDropdown.module.css";
 export const KnowledgeLevelDropdown = ({ level, setLevel }) => {
   return (
     <FormControl className={css.form}>
-      <InputLabel id="knowledge-level-label">Level of knowledge</InputLabel>
+      <InputLabel
+        id="knowledge-level-label"
+        sx={{
+          color: "#8A8A89",
+          fontSize: "14px",
+          lineHeight: "18px",
+          fontWeight: "500",
+        }}
+      >
+        Level of knowledge
+      </InputLabel>
       <Select
         labelId="knowledge-level-label"
         value={level}
