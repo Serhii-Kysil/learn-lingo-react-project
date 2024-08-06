@@ -2,7 +2,6 @@
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
 import css from "./LanguageDropdown.module.css";
-import { BiBorderAll } from "react-icons/bi";
 
 export const LanguageDropdown = ({ language, setLanguage }) => {
   return (
