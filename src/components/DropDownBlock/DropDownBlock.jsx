@@ -12,7 +12,9 @@ export const DropDownBlock = () => {
 
   return (
     <Box display="flex" justifyContent="space-around" p={3}>
-      <LanguageDropdown />
+      <LanguageDropdown language={language} setLanguage={setLanguage} />
+      <KnowledgeLevelDropdown level={level} setLevel={setLevel} />
+      <PriceDropdown price={price} setPrice={setPrice} />
     </Box>
   );
 };
