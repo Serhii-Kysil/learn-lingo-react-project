@@ -1,8 +1,11 @@
+/* eslint-disable react/prop-types */
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+
+import css from "./KnowledgeLevelDropdown.module.css";
 
 export const KnowledgeLevelDropdown = ({ level, setLevel }) => {
   return (
-    <FormControl fullWidth>
+    <FormControl className={css.form}>
       <InputLabel id="knowledge-level-label">Level of knowledge</InputLabel>
       <Select
         labelId="knowledge-level-label"

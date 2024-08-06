@@ -1,3 +1,4 @@
 .container {
   width: 1184px;
+  display: flex;
 }

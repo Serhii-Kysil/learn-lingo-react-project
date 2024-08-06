@@ -1,8 +1,11 @@
+/* eslint-disable react/prop-types */
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+
+import css from "./PriceDropdown.module.css";
 
 export const PriceDropdown = ({ price, setPrice }) => {
   return (
-    <FormControl fullWidth>
+    <FormControl className={css.form}>
       <InputLabel id="price-label">Price</InputLabel>
       <Select
         labelId="price-label"
