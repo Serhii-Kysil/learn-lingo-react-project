@@ -26,11 +26,37 @@ export const PriceDropdown = ({ price, setPrice }) => {
             fontSize: "18px",
             lineHeight: "20px",
           },
-          "& .MuiMenuItem": {
+          "& .MuiMenuItem-root": {
             color: "grey",
           },
           "& .Mui-selected": {
             color: "#121417",
+          },
+        }}
+        MenuProps={{
+          PaperProps: {
+            sx: {
+              "& .MuiMenuItem-root": {
+                background: "#FFFFFF",
+                fontSize: "18px",
+                lineHeight: "20px",
+                color: "#12141733",
+                padding: "8px 18px",
+                borderRadius: "12px",
+
+                "&.Mui-selected": {
+                  color: "#121417",
+                  fontWeight: "500",
+                },
+                "&.Mui-selected:hover": {
+                  backgroundColor: "transparent",
+                  color: "#121417",
+                },
+              },
+              "& .MuiList-root": {
+                padding: "6px 0px",
+              },
+            },
           },
         }}
       >
