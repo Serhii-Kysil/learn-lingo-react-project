@@ -1,3 +1,9 @@
 .form {
   width: 221px;
 }
+.MuiSelect-select {
+  border: none;
+}
+.label {
+  margin-bottom: 8px;
+}

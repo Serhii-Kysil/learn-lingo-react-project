@@ -16,7 +16,6 @@ export const DropDownBlock = () => {
     <div className={css.container}>
       <Box
         display="flex"
-        justifyContent="space-around"
         p={3}
         gap={"20px"}
         padding={0}
