@@ -31,14 +31,14 @@ export default function TeachersPage() {
   const [price, setPrice] = useState(30);
 
   useEffect(() => {
-    dispatch(fetchTeachers({ page, lastKey: null }));
-  }, [dispatch]);
+    dispatch(fetchTeachers({ page, lastKey: null, language, level, price }));
+  }, [dispatch, language, level, price]);
 
   useEffect(() => {
     if (page > 1) {
-      dispatch(fetchTeachers({ page, lastKey }));
+      dispatch(fetchTeachers({ page, lastKey, language, level, price }));
     }
-  }, [dispatch, page, lastKey]);
+  }, [dispatch, page, lastKey, language, level, price]);
 
   const handleLoadMore = () => {
     setPage((prevPage) => prevPage + 1);
