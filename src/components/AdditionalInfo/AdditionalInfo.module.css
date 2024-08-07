@@ -2,43 +2,69 @@
   margin-top: 24px;
   border: 1.5px dashed #f4c550;
   border-radius: 30px;
-  width: 1312px;
-  padding-bottom: 40px;
-  padding-top: 40px;
-  /* padding: 40px 120px; */
+  width: 100%;
+  max-width: 1312px;
+  padding: 20px;
+  box-sizing: border-box;
 }
-.infoList {
-  list-style: none;
+
+@media (min-width: 768px) {
+  .addInfoBlock {
+    padding: 40px;
+  }
 }
 
 .infoList {
+  list-style: none;
   display: flex;
-  flex-direction: row;
-  gap: 100px;
-  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
 }
+
+@media (min-width: 768px) {
+  .infoList {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
 .listItem {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
+  text-align: center;
 }
 
 .main {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 500;
-  line-height: 32px;
+  line-height: 28px;
   letter-spacing: -0.02em;
-  text-align: left;
 }
+
+@media (min-width: 768px) {
+  .main {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+
 .second {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 16px;
   letter-spacing: -0.02em;
-  text-align: left;
-
   max-width: 90px;
-
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+
+@media (min-width: 768px) {
+  .second {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
