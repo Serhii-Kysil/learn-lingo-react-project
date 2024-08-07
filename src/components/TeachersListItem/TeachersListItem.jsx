@@ -89,14 +89,14 @@ export const TeachersListItem = ({ teacher }) => {
               </p>
             </div>
 
-            {isFavorite && (
+            {isLoggedIn && isFavorite && (
               <FaHeart
                 className={css.pickedHeart}
                 onClick={handleFavoriteClick}
               />
             )}
 
-            {!isFavorite && (
+            {(!isLoggedIn || !isFavorite) && (
               <FaRegHeart className={css.heart} onClick={handleFavoriteClick} />
             )}
           </div>
