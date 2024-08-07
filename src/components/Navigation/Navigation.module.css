@@ -3,9 +3,17 @@
   gap: 28px;
   align-items: center;
 }
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+}
+
 .btn {
   height: 100%;
-
   border: none;
   outline: none;
   background-color: transparent;
@@ -16,6 +24,7 @@
   text-align: left;
   cursor: pointer;
 }
+
 .active .btn {
   color: #f4c550;
 }
