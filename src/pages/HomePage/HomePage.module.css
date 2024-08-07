@@ -19,6 +19,5 @@
 @media (min-width: 768px) {
   .welcomeSection {
     flex-direction: row;
-    gap: 24px;
   }
 }
