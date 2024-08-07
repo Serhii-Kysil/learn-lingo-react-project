@@ -26,6 +26,9 @@ export default function TeachersPage() {
   const hasMore = useSelector(selectHasMore);
 
   const [page, setPage] = useState(1);
+  const [language, setLanguage] = useState("English");
+  const [level, setLevel] = useState("A1 Beginner");
+  const [price, setPrice] = useState(30);
 
   useEffect(() => {
     dispatch(fetchTeachers({ page, lastKey: null }));
@@ -51,7 +54,14 @@ export default function TeachersPage() {
 
   return (
     <div className={css.pageCont}>
-      <DropDownBlock />
+      <DropDownBlock
+        language={language}
+        setLanguage={setLanguage}
+        level={level}
+        setLevel={setLevel}
+        price={price}
+        setPrice={setPrice}
+      />
 
       <TeachersList items={teachers} />
       {hasMore && (

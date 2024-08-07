@@ -1,5 +1,5 @@
+/* eslint-disable react/prop-types */
 import { Box } from "@mui/material";
-import { useState } from "react";
 
 import css from "./DropDownBlock.module.css";
 
@@ -7,11 +7,14 @@ import { LanguageDropdown } from "../LanguageDropdown/LanguageDropdown";
 import { KnowledgeLevelDropdown } from "../KnowledgeLevelDropdown/KnowledgeLevelDropdown";
 import { PriceDropdown } from "../PriceDropdown/PriceDropdown";
 
-export const DropDownBlock = () => {
-  const [language, setLanguage] = useState("English");
-  const [level, setLevel] = useState("A1 Beginner");
-  const [price, setPrice] = useState(30);
-
+export const DropDownBlock = ({
+  language,
+  setLanguage,
+  level,
+  setLevel,
+  price,
+  setPrice,
+}) => {
   return (
     <div className={css.container}>
       <Box
