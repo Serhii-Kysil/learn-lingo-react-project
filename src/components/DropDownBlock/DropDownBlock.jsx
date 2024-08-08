@@ -1,8 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Box } from "@mui/material";
-
 import css from "./DropDownBlock.module.css";
-
 import { LanguageDropdown } from "../LanguageDropdown/LanguageDropdown";
 import { KnowledgeLevelDropdown } from "../KnowledgeLevelDropdown/KnowledgeLevelDropdown";
 import { PriceDropdown } from "../PriceDropdown/PriceDropdown";
@@ -19,6 +17,7 @@ export const DropDownBlock = ({
     <div className={css.container}>
       <Box
         display="flex"
+        flexDirection={{ xs: "column", md: "row" }}
         p={3}
         gap={"20px"}
         padding={0}
