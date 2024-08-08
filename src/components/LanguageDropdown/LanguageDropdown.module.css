@@ -1,9 +1,10 @@
 .form {
-  width: 221px;
+  width: 100%;
+  max-width: 221px;
 }
-.MuiSelect-select {
-  border: none;
-}
-.label {
-  margin-bottom: 8px;
+
+@media (min-width: 768px) {
+  .form {
+    width: 221px;
+  }
 }
