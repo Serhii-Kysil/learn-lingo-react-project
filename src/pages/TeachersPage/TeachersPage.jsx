@@ -63,7 +63,7 @@ export default function TeachersPage() {
         setPrice={setPrice}
       />
 
-      <TeachersList items={teachers} />
+      {/* <TeachersList items={teachers} /> */}
       {hasMore && (
         <button
           type="button"

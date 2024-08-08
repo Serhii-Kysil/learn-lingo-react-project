@@ -1,23 +1,31 @@
 .pageCont {
-  /* margin-left: 128px;
-  margin-right: 128px; */
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #f8f8f8;
   padding-bottom: 96px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  min-height: 90vh;
 }
+
+@media (min-width: 768px) {
+  .pageCont {
+    padding-left: 128px;
+    padding-right: 128px;
+  }
+}
+
 .loadMoreBtn {
   font-size: 18px;
   font-weight: 700;
   line-height: 28px;
   text-align: left;
-
   border-radius: 12px;
   border: none;
   background: #f4c550;
-  padding: 16px 48px 16px 48px;
+  padding: 16px 48px;
   cursor: pointer;
-
   margin-top: 64px;
 }
