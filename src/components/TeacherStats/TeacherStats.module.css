@@ -1,0 +1,62 @@
+.mainBar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  height: 24px;
+}
+.lessonsFormat {
+  display: flex;
+  gap: 8px;
+
+  align-items: center;
+  width: 132px;
+}
+.bookIcon {
+  width: 16px;
+  height: 16px;
+}
+.format {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+.line {
+  height: 16px;
+
+  border: 1px solid #12141733;
+  display: flex;
+}
+.lessonsDone {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+.ratingBlock {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+.starIcon {
+  fill: #ffc531;
+}
+.price {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+.priceSpan {
+  color: #38cd3e;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
