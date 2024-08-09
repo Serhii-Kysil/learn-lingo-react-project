@@ -7,6 +7,7 @@
   padding: 24px;
 
   flex-direction: column;
+  align-items: center;
 }
 
 .infoBlock {
@@ -29,10 +30,11 @@
 
 .topBar {
   display: flex;
-  gap: 64px;
+  gap: 32px;
 
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 
 .loadMoreBtn {
@@ -50,10 +52,26 @@
   padding: 0;
 }
 
+@media only screen and (min-width: 768px) {
+  .listItem {
+    width: 100%;
+  }
+  .topBlock {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .infoBlock {
+    width: 968px;
+  }
+}
+
 @media only screen and (min-width: 1440px) {
   .listItem {
     width: 1184px;
     flex-direction: row;
+    align-items: normal;
   }
   .infoBlock {
     width: 968px;
@@ -61,5 +79,8 @@
   .topBlock {
     gap: 0px;
     flex-direction: row;
+  }
+  .topBar {
+    gap: 64px;
   }
 }
