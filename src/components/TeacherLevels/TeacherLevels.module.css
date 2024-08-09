@@ -3,6 +3,8 @@
   gap: 8px;
   margin-top: 32px;
   margin-bottom: 32px;
+
+  flex-wrap: wrap;
 }
 .levelTag {
   border-radius: 35px;
