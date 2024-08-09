@@ -35,7 +35,7 @@ export const BookingForm = ({ onClose }) => {
             {...register("reason")}
             className={css.radioInput}
           />
-          <span></span>
+          <span className={css.inputSpan}></span>
           Career and business
         </label>
         <label>
@@ -45,7 +45,7 @@ export const BookingForm = ({ onClose }) => {
             {...register("reason")}
             className={css.radioInput}
           />
-          <span></span>
+          <span className={css.inputSpan}></span>
           Lesson for kids
         </label>
         <label>
@@ -55,7 +55,7 @@ export const BookingForm = ({ onClose }) => {
             {...register("reason")}
             className={css.radioInput}
           />
-          <span></span>
+          <span className={css.inputSpan}></span>
           Living abroad
         </label>
         <label>
@@ -65,7 +65,7 @@ export const BookingForm = ({ onClose }) => {
             {...register("reason")}
             className={css.radioInput}
           />
-          <span></span>
+          <span className={css.inputSpan}></span>
           Exams and coursework
         </label>
         <label>
@@ -75,7 +75,7 @@ export const BookingForm = ({ onClose }) => {
             {...register("reason")}
             className={css.radioInput}
           />
-          <span></span>
+          <span className={css.inputSpan}></span>
           Culture, travel or hobby
         </label>
         {errors.reason && <p className={css.error}>{errors.reason.message}</p>}
