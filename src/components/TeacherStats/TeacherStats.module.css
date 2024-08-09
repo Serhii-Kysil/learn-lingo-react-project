@@ -3,7 +3,8 @@
   align-items: center;
   gap: 16px;
 
-  height: 24px;
+  /* height: 24px; */
+  flex-wrap: wrap;
 }
 .lessonsFormat {
   display: flex;
