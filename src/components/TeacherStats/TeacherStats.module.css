@@ -5,6 +5,7 @@
 
   /* height: 24px; */
   flex-wrap: wrap;
+  justify-content: center;
 }
 .lessonsFormat {
   display: flex;
