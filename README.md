@@ -57,7 +57,7 @@ The application design follows the provided Figma layout with some variations in
 To get started with this project, clone the repository and install the dependencies:
 
 ```bash
-git clone <repository-url>
+git clone (https://github.com/Serhii-Kysil/learn-lingo-react-project.git)
 cd learn-lingo
 npm install
 npm start
