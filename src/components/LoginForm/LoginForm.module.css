@@ -79,6 +79,13 @@
 
   width: 20px;
   height: 20px;
+
+  transition: var(--animation);
+}
+
+.eyeButton :hover,
+.eyeButton :focus {
+  fill: #ffdc86;
 }
 
 .eye {
