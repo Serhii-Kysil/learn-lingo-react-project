@@ -23,6 +23,13 @@
   line-height: 20px;
   text-align: left;
   cursor: pointer;
+
+  transition: var(--animation);
+}
+
+.btn:hover,
+.btn:focus {
+  color: #f4c550;
 }
 
 .active .btn {

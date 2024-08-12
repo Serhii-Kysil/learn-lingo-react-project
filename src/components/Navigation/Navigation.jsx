@@ -18,6 +18,7 @@ export const Navigation = () => {
       >
         <button className={css.btn}>Home</button>
       </NavLink>
+
       <NavLink
         to="/teachers"
         className={({ isActive }) =>
