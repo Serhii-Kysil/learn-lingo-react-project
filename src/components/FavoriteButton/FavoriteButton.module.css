@@ -5,9 +5,20 @@
   cursor: pointer;
   transition: var(--animation);
 }
+
+.pickedHeart:hover,
+.pickedHeart:focus {
+  opacity: 0.8;
+}
+
 .heart {
   width: 26px;
   height: 26px;
   cursor: pointer;
   transition: var(--animation);
+}
+
+.heart:hover,
+.heart:focus {
+  color: #f4c550;
 }
