@@ -31,8 +31,6 @@ export const RegistrationForm = ({ onClose }) => {
   });
 
   const onSubmit = (data) => {
-    console.log(data);
-
     onClose();
     dispatch(registerUser(data));
   };

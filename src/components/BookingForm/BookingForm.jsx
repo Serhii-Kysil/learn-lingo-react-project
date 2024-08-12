@@ -22,7 +22,6 @@ export const BookingForm = ({ onClose }) => {
 
   const onSubmit = (data) => {
     onClose();
-    console.log(data);
   };
 
   return (
