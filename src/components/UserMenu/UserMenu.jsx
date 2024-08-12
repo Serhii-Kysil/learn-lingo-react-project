@@ -4,7 +4,7 @@ import { FiLogIn } from "react-icons/fi";
 import { FaUser } from "react-icons/fa";
 
 import { selectUser } from "../../redux/Auth/selector";
-import { logoutUser } from "../../redux/Auth/AuthSlice";
+import { logoutUser } from "../../redux/Auth/operations";
 
 import { useSelector, useDispatch } from "react-redux";
 

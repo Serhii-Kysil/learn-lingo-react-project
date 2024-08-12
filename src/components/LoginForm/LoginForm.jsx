@@ -7,7 +7,7 @@ import css from "./LoginForm.module.css";
 import { useState } from "react";
 
 import { useDispatch } from "react-redux";
-import { loginUser } from "../../redux/Auth/AuthSlice";
+import { loginUser } from "../../redux/Auth/operations";
 
 const schema = yup.object().shape({
   email: yup

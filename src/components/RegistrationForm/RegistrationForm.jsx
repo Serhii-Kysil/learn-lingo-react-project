@@ -7,7 +7,7 @@ import * as yup from "yup";
 import css from "./RegistrationForm.module.css";
 
 import { useDispatch } from "react-redux";
-import { registerUser } from "../../redux/Auth/AuthSlice";
+import { registerUser } from "../../redux/Auth/operations";
 
 const schema = yup.object().shape({
   name: yup.string().required("Name is required").min(4),
