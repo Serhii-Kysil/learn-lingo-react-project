@@ -4,13 +4,13 @@ import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_DATABASE_KEY,
-  authDomain: "learn-lingo-ad84f.firebaseapp.com",
-  databaseURL: "https://learn-lingo-ad84f-default-rtdb.firebaseio.com",
-  projectId: "learn-lingo-ad84f",
-  storageBucket: "learn-lingo-ad84f.appspot.com",
-  messagingSenderId: "563516086482",
-  appId: "1:563516086482:web:3b9e109775cd18e30df50b",
-  measurementId: "G-R1XGV9NSP6",
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_DATABASE_URL,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
+  measurementId: import.meta.env.VITE_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
