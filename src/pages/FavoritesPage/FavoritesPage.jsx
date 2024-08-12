@@ -7,14 +7,18 @@ import { useSelector } from "react-redux";
 import { DropDownBlock } from "../../components/DropDownBlock/DropDownBlock";
 
 export default function FavoritesPage() {
-  const favotites = useSelector(selectFavorites);
+  const favorites = useSelector(selectFavorites);
 
   return (
     <>
       <div className={css.pageCont}>
-        <DropDownBlock />
+        {/* <DropDownBlock /> */}
 
-        <TeachersList items={favotites} />
+        {favorites.length > 0 ? (
+          <TeachersList items={favorites} />
+        ) : (
+          <p className={css.placeholder}>You have no favorite teachers yet.</p>
+        )}
       </div>
     </>
   );
