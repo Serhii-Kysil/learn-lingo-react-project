@@ -16,6 +16,13 @@
   font-weight: 700;
   line-height: 28px;
   text-align: left;
+
+  transition: var(--animation);
+}
+
+.submitBtn:hover,
+.submitBtn:focus {
+  background: #ffdc86;
 }
 
 .error {
