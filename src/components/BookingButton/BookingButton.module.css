@@ -10,4 +10,11 @@
   font-weight: 700;
   line-height: 28px;
   text-align: left;
+
+  transition: var(--animation);
+}
+
+.bookBtn:hover,
+.bookBtn:focus {
+  background-color: #fbe9ba;
 }

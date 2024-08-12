@@ -29,6 +29,13 @@
   border-radius: 12px;
   outline: none;
   cursor: pointer;
+
+  transition: var(--animation);
+}
+
+.bookBtn:hover,
+.bookBtn:focus {
+  background-color: #fbe9ba;
 }
 
 .userDataBlock {
